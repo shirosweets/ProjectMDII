@@ -6,9 +6,9 @@ VALGRIND = valgrind --leak-check=full --show-reachable=yes
 PATH_P1 = Parte_1/Files/
 PATH_P2 = Parte_2/
 
-parte1: grafos_chicos grafos_grandes k_grafos
+part1: grafos_chicos grafos_grandes k_grafos
 
-parte2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
+part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
 		$(CC) $(CFLAGS) -o p_2 $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
 		#./p_2 < Grafos_Chicos/Grafo_mas_chico.txt
 		#./p_2 < Grafos_Chicos/Grafo_chico.txt
