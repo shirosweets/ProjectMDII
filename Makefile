@@ -10,13 +10,13 @@ part1: small_graphs grafos_grandes k_grafos
 
 part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
 		$(CC) $(CFLAGS) -o p_2 $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
-		#./p_2 < Grafos_Chicos/Grafo_mas_chico.txt
-		#./p_2 < Grafos_Chicos/Grafo_chico.txt
-		#./p_2 < Grafos_Chicos/n=100_m=1470.txt
-		#./p_2 < Grafos_Chicos/n=1010_m=60980.txt
-		#./p_2 < Grafos_Chicos/n=169_m=3328.txt
-		#./p_2 < Grafos_Chicos/n=3779_m=371357.txt
-		#./p_2 < Grafos_Chicos/n=385_m=19095.txt
+		#./p_2 < SmallGraphs/Grafo_mas_chico.txt
+		#./p_2 < SmallGraphs/Grafo_chico.txt
+		#./p_2 < SmallGraphs/n=100_m=1470.txt
+		#./p_2 < SmallGraphs/n=1010_m=60980.txt
+		#./p_2 < SmallGraphs/n=169_m=3328.txt
+		#./p_2 < SmallGraphs/n=3779_m=371357.txt
+		#./p_2 < SmallGraphs/n=385_m=19095.txt
 		#./p_2 < K_Grafos/K1000.txt
 		#./p_2 < K_Grafos/K100.txt
 		#./p_2 < K_Grafos/K500.txt
@@ -31,13 +31,13 @@ part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones
 
 small_graphs: $(OBJS_P1)
 		$(CC) $(CFLAGS) -o p_1 $(OBJS_P1)
-		./p_1 < Grafos_Chicos/Grafo_mas_chico.txt
-		#./p_1 < Grafos_Chicos/Grafo_chico.txt
-		#./p_1 < Grafos_Chicos/n=100_m=1470.txt
-		#./p_1 < Grafos_Chicos/n=1010_m=60980.txt
-		#./p_1 < Grafos_Chicos/n=169_m=3328.txt
-		#./p_1 < Grafos_Chicos/n=3779_m=371357.txt
-		#./p_1 < Grafos_Chicos/n=385_m=19095.txt
+		./p_1 < SmallGraphs/Grafo_mas_chico.txt
+		#./p_1 < SmallGraphs/Grafo_chico.txt
+		#./p_1 < SmallGraphs/n=100_m=1470.txt
+		#./p_1 < SmallGraphs/n=1010_m=60980.txt
+		#./p_1 < SmallGraphs/n=169_m=3328.txt
+		#./p_1 < SmallGraphs/n=3779_m=371357.txt
+		#./p_1 < SmallGraphs/n=385_m=19095.txt
 
 k_grafos: $(OBJS_P1)
 		$(CC) $(CFLAGS) -o p_1 $(OBJS_P1)
