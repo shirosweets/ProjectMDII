@@ -6,7 +6,7 @@ VALGRIND = valgrind --leak-check=full --show-reachable=yes
 PATH_P1 = Parte_1/Files/
 PATH_P2 = Parte_2/
 
-part1: small_graphs grafos_grandes k_grafos
+part1: small_graphs big_graphs k_grafos
 
 part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
 		$(CC) $(CFLAGS) -o p_2 $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
@@ -20,13 +20,13 @@ part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones
 		#./p_2 < K_Grafos/K1000.txt
 		#./p_2 < K_Grafos/K100.txt
 		#./p_2 < K_Grafos/K500.txt
-		#./p_2 < Grafos_grandes/Bipartito.txt
-		#./p_2 < Grafos_grandes/Grafo_aleatorio.txt
-		#./p_2 < Grafos_grandes/Grafo_comprimido.txt
-		#./p_2 < Grafos_grandes/n=2210104_m=8807410.txt
-		#./p_2 < Grafos_grandes/n=221651_m=12528006.txt
-		#./p_2 < Grafos_grandes/n=23658_m=5586907.txt
-		#./p_2 < Grafos_grandes/n=3080_m=4m.txt
+		#./p_2 < BigGraphs/Bipartito.txt
+		#./p_2 < BigGraphs/Grafo_aleatorio.txt
+		#./p_2 < BigGraphs/Grafo_comprimido.txt
+		#./p_2 < BigGraphs/n=2210104_m=8807410.txt
+		#./p_2 < BigGraphs/n=221651_m=12528006.txt
+		#./p_2 < BigGraphs/n=23658_m=5586907.txt
+		#./p_2 < BigGraphs/n=3080_m=4m.txt
 
 
 small_graphs: $(OBJS_P1)
@@ -45,15 +45,15 @@ k_grafos: $(OBJS_P1)
 		./p_1 < K_Grafos/K100.txt
 		./p_1 < K_Grafos/K500.txt
 
-grafos_grandes: $(OBJS_P1)
+big_graphs: $(OBJS_P1)
 		$(CC) $(CFLAGS) -o p_1 $(OBJS_P1)
-		#./p_1 < Grafos_grandes/Bipartito.txt
-		#./p_1 < Grafos_grandes/Grafo_aleatorio.txt
-		#./p_1 < Grafos_grandes/Grafo_comprimido.txt
-		#./p_1 < Grafos_grandes/n=2210104_m=8807410.txt
-		./p_1 < Grafos_grandes/n=221651_m=12528006.txt
-		#./p_1 < Grafos_grandes/n=23658_m=5586907.txt
-		#./p_1 < Grafos_grandes/n=3080_m=4m.txt
+		#./p_1 < BigGraphs/Bipartito.txt
+		#./p_1 < BigGraphs/Grafo_aleatorio.txt
+		#./p_1 < BigGraphs/Grafo_comprimido.txt
+		#./p_1 < BigGraphs/n=2210104_m=8807410.txt
+		./p_1 < BigGraphs/n=221651_m=12528006.txt
+		#./p_1 < BigGraphs/n=23658_m=5586907.txt
+		#./p_1 < BigGraphs/n=3080_m=4m.txt
 
 main.o:
 		$(CC) $(CFLAGS) -c $(PATH_P1)main.c
