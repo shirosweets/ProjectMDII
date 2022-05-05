@@ -6,7 +6,7 @@ VALGRIND = valgrind --leak-check=full --show-reachable=yes
 PATH_P1 = Parte_1/Files/
 PATH_P2 = Parte_2/
 
-part1: small_graphs big_graphs k_grafos
+part1: small_graphs big_graphs k_graphs
 
 part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
 		$(CC) $(CFLAGS) -o p_2 $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones.o $(PATH_P2)main2.o
@@ -17,9 +17,9 @@ part2: $(PATH_P1)RomaVictor.o $(PATH_P1)GrafoFunciones.o $(PATH_P2)gba_funciones
 		#./p_2 < SmallGraphs/n=169_m=3328.txt
 		#./p_2 < SmallGraphs/n=3779_m=371357.txt
 		#./p_2 < SmallGraphs/n=385_m=19095.txt
-		#./p_2 < K_Grafos/K1000.txt
-		#./p_2 < K_Grafos/K100.txt
-		#./p_2 < K_Grafos/K500.txt
+		#./p_2 < KGraphs/K1000.txt
+		#./p_2 < KGraphs/K100.txt
+		#./p_2 < KGraphs/K500.txt
 		#./p_2 < BigGraphs/Bipartito.txt
 		#./p_2 < BigGraphs/Grafo_aleatorio.txt
 		#./p_2 < BigGraphs/Grafo_comprimido.txt
@@ -39,11 +39,11 @@ small_graphs: $(OBJS_P1)
 		#./p_1 < SmallGraphs/n=3779_m=371357.txt
 		#./p_1 < SmallGraphs/n=385_m=19095.txt
 
-k_grafos: $(OBJS_P1)
+k_graphs: $(OBJS_P1)
 		$(CC) $(CFLAGS) -o p_1 $(OBJS_P1)
-		./p_1 < K_Grafos/K1000.txt
-		./p_1 < K_Grafos/K100.txt
-		./p_1 < K_Grafos/K500.txt
+		./p_1 < KGraphs/K1000.txt
+		./p_1 < KGraphs/K100.txt
+		./p_1 < KGraphs/K500.txt
 
 big_graphs: $(OBJS_P1)
 		$(CC) $(CFLAGS) -o p_1 $(OBJS_P1)
